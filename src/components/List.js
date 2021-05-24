@@ -1,17 +1,13 @@
 import React from "react";
+import ListItem from "./ListItem";
 
-const List = (props) => {
-  console.log(props);
-  const { todoList } = props;
+const List = ({ todoList }) => {
+  const array = todoList.map((ele, i) => {
+    return <ListItem key={i} todoList={ele.todo} id={ele.id} />;
+  });
   return (
     <>
-      <div className="todoList">
-        <ul>
-          {todoList.map((ele, i) => {
-            return <li></li>;
-          })}
-        </ul>
-      </div>
+      <ul>{array}</ul>
     </>
   );
 };

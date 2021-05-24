@@ -1,7 +1,15 @@
 import React from "react";
 
-const ListItem = () => {
-  return;
+const ListItem = ({ todoList, id }) => {
+  const ConsoleID = () => {
+    console.log(id);
+  };
+  return (
+    <div>
+      <li>{todoList} </li>
+      <button onClick={ConsoleID}>click</button>
+    </div>
+  );
 };
 
 export default ListItem;
